@@ -3,7 +3,13 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -39,4 +45,29 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  font-family: IBM Plex Mono, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--section-description-color);
+  text-shadow: 2px 2px 0px var(--link-shadow-color);
+}
+
+.link:hover {
+  border-bottom: 0.5px solid var(--section-description-color);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 0.5px solid var(--section-description-color);
 }
