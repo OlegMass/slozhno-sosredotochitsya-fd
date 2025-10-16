@@ -9,5 +9,18 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-   --background-image: url(../images/cover-image-dark.png);
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000028;
+  --accent-color: rgba(255, 0, 112, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --section-title-color: rgba(255, 0, 112, 1);
+  --description-color: rgba(0, 0, 40, 1);
+  --section-description-color: rgba(241, 178, 206, 1);
+  --decorative-el-color: rgba(255, 0, 112, 1);
+  --decorative-el-corner-color: rgba(255, 0, 112, 1);
+  --button-text-color: rgba(255, 0, 112, 1);
+  --button-default-color: rgba(255, 0, 112, 1);
+  --border-button-hover-color: rgba(255, 0, 112, 0.4);
+  --border-button-focus-color: rgba(255, 0, 112, 1);
+  --link-shadow-color: rgba(255, 0, 112, 1);
 }
