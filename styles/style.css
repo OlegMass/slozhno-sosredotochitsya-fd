@@ -23,26 +23,39 @@
   position: relative;
   padding-bottom: 60px;
   box-sizing: border-box;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
-.header::before {
+.header::before,
+.header::after,
+.footer::before,
+.footer::after {
   content: "";
   block-size: 25px;
   inline-size: 25px;
-  border-top: 1px solid var(--decorative-el-corner-color);
-  border-right: 1px solid var(--adecorative-el-corner-color);
   position: absolute;
+}
+
+.header::before,
+.footer::before {
+  border-top: 1px solid var(--decorative-el-corner-color);
+  border-right: 1px solid var(--decorative-el-corner-color);
+}
+
+.header::after,
+.footer::after {
+  border-bottom: 1px solid var(--decorative-el-corner-color);
+  border-left: 1px solid var(--decorative-el-corner-color);
+}
+
+.header::before {
   right: 10px;
   top: 10px;
 }
 
 .header::after {
-  content: "";
-  block-size: 25px;
-  inline-size: 25px;
-  border-bottom: 1px solid var(--decorative-el-corner-color);
-  border-left: 1px solid var(--decorative-el-corner-color);
-  position: absolute;
   left: 10px;
   bottom: 15px;
 }
@@ -129,7 +142,6 @@
   line-height: 83%;
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
 }
 
 .header__title {
@@ -152,6 +164,9 @@
 
 .section {
   margin-bottom: 50px;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .title-decor {
@@ -160,17 +175,11 @@
 }
 
 .title {
-  font-family: IBM Plex Mono, sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
 }
 
 .text {
-  font-family: IBM Plex Mono, sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
 }
 
 .section__title {
@@ -244,24 +253,12 @@
 }
 
 .footer::before {
-  content: "";
-  block-size: 25px;
-  inline-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  position: absolute;
   grid-row: 1;
   right: 10px;
   top: 3px;
 }
 
 .footer::after {
-  content: "";
-  block-size: 25px;
-  inline-size: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  position: absolute;
   grid-row: 3;
   left: 10px;
   bottom: 14px;
@@ -325,7 +322,7 @@
     margin-right: 20px;
   }
 
-  .section-two-columns {
+  .section-problem-solution {
     display: grid;
     row-gap: 20px;
     grid-template-columns: 1fr 480px;
@@ -354,25 +351,25 @@
     margin-right: 10px;
   }
 
-  .section-one-to-three-columns{
+  .section-distractions {
     margin-top: 80px;
     margin-bottom: 78px;
   }
 
-  .section-one-to-three-columns .section__title {
+  .section-distractions .section__title {
     padding-right: 600px;
   }
 
-  .section-one-to-three-columns .article__title {
+  .section-distractions .article__title {
     margin-top: 20px;
     margin-left: 10px;
   }
 
-  .section-one-to-three-columns .article__description {
+  .section-distractions .article__description {
     margin-left: 10px;
   }
 
-  .intro-advice  {
+  .intro-advice {
     margin-top: 20px;
     margin-right: 8px;
   }
@@ -461,10 +458,8 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: space-between;
     align-items: center;
     padding-top: 20px;
     margin-right: 0px;
@@ -484,7 +479,7 @@
     bottom: 40px;
   }
 
-  .section-two-columns {
+  .section-problem-solution {
     grid-template-columns: 1fr 659px;
     margin-top: 5px;
     margin-right: 1px;
@@ -500,7 +495,7 @@
     margin-bottom: 10px;
   }
 
-  .section-one-to-three-columns {
+  .section-distractions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
@@ -508,22 +503,21 @@
     margin-bottom: 82px;
   }
 
-  .section-one-to-three-columns .section__title {
+  .section-distractions .section__title {
     grid-column: span 3;
     grid-row: 1;
     padding-right: 700px;
     margin-bottom: 18px;
   }
 
-  .section-one-to-three-columns .article__title {
+  .section-distractions .article__title {
     margin-top: 0;
   }
 
-
-.section-one-to-three-columns .article {
-  grid-column: span 1; 
-  grid-auto-flow: row; 
-}
+  .section-distractions .article {
+    grid-column: span 1;
+    grid-auto-flow: row;
+  }
 
   .gallery {
     grid-template-rows: 260px 315px 433px;

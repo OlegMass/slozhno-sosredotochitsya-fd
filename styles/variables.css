@@ -21,8 +21,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root,
-  :root.theme-auto {
+  :root {
     --background-image: url(../images/cover-image-light.png);
     --background-color: #fff1f7;
     --accent-color: rgba(255, 141, 203, 1);
@@ -38,4 +37,4 @@
     --border-button-focus-color: rgba(53, 52, 48, 1);
     --link-shadow-color: rgba(255, 141, 203, 1);
   }
-}
+} 
