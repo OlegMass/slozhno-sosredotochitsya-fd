@@ -163,7 +163,7 @@
   line-height: 23.4px;
 }
 
-.section-problem-solution{
+.section-problem-solution {
   margin-bottom: 46px;
 }
 
@@ -230,14 +230,13 @@
 
 .gallery__title {
   margin-top: 53px;
-  
 }
 
 .gallery__image {
   justify-self: center;
 }
 
-.gallery:last-child{
+.gallery:last-child {
   margin-bottom: -20px;
 }
 
@@ -448,7 +447,6 @@
 @media (width >= 1024px) {
   .header {
     min-block-size: 768px;
-    
   }
 
   .header__theme-menu {
