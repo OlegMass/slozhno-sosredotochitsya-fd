@@ -16,12 +16,11 @@
 
 .header {
   height: 100vh;
-  min-height: 672px;
+  min-height: 668px;
   display: grid;
   grid-template-rows: repeat(4, min-content);
   align-items: center;
   position: relative;
-  padding-bottom: 60px;
   box-sizing: border-box;
   font-family: IBM Plex Mono, sans-serif;
   font-size: 18px;
@@ -42,22 +41,16 @@
 .footer::before {
   border-top: 1px solid var(--decorative-el-corner-color);
   border-right: 1px solid var(--decorative-el-corner-color);
+  right: 10px;
+  top: 10px;
 }
 
 .header::after,
 .footer::after {
   border-bottom: 1px solid var(--decorative-el-corner-color);
   border-left: 1px solid var(--decorative-el-corner-color);
-}
-
-.header::before {
-  right: 10px;
-  top: 10px;
-}
-
-.header::after {
   left: 10px;
-  bottom: 15px;
+  bottom: 10px;
 }
 
 .header_decorative_text {
@@ -147,6 +140,7 @@
 .header__title {
   grid-row: 3;
   text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: 700;
   padding-top: 67px;
   margin-left: 10px;
 }
@@ -154,12 +148,12 @@
 .header__description {
   display: inline;
   text-wrap: wrap;
-  margin: 52px 10px 10px 10px;
+  margin: 52px 10px 0px 10px;
   grid-row: 4;
 }
 
 .main {
-  padding: 37px 10px 0px 10px;
+  padding: 35px 10px 10px 10px;
 }
 
 .section {
@@ -169,6 +163,14 @@
   line-height: 23.4px;
 }
 
+.section-problem-solution{
+  margin-bottom: 46px;
+}
+
+.section-grid {
+  display: grid;
+}
+
 .title-decor {
   color: var(--description-color);
   background-color: var(--accent-color);
@@ -176,6 +178,7 @@
 
 .title {
   font-weight: 700;
+  margin-top: 4px;
 }
 
 .text {
@@ -183,6 +186,7 @@
 }
 
 .section__title {
+  margin-top: 3px;
   color: var(--section-title-color);
 }
 
@@ -225,17 +229,21 @@
 }
 
 .gallery__title {
-  margin-top: 1px;
+  margin-top: 53px;
+  
 }
 
 .gallery__image {
   justify-self: center;
 }
 
+.gallery:last-child{
+  margin-bottom: -20px;
+}
+
 .footer {
   height: 100vh;
-  min-height: 664px;
-  width: 100%;
+  min-height: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
@@ -248,20 +256,15 @@
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 0 var(--accent-color);
-  padding-bottom: 10px;
   grid-row: 2;
 }
 
 .footer::before {
   grid-row: 1;
-  right: 10px;
-  top: 3px;
 }
 
 .footer::after {
   grid-row: 3;
-  left: 10px;
-  bottom: 14px;
 }
 
 @media (width >= 375px) {
@@ -277,17 +280,19 @@
   }
 
   .header {
-    min-height: 1033px;
+    min-height: 1024px;
   }
 
-  .header::before {
+  .header::before,
+  .footer::before {
     right: 20px;
     top: 20px;
   }
 
-  .header::after {
+  .header::after,
+  .footer::after {
     left: 20px;
-    bottom: 30px;
+    bottom: 20px;
   }
 
   .header__theme-menu-list {
@@ -322,8 +327,11 @@
     margin-right: 20px;
   }
 
+  .main {
+    padding-top: 45px;
+  }
+
   .section-problem-solution {
-    display: grid;
     row-gap: 20px;
     grid-template-columns: 1fr 480px;
     justify-content: space-between;
@@ -338,7 +346,7 @@
     padding-right: 20px;
   }
 
-  .article {
+  .section-problem-solution__article {
     grid-column: 2;
   }
 
@@ -428,27 +436,19 @@
   }
 
   .footer {
-    min-block-size: 1030px;
+    min-height: 1024px;
+    margin-top: 10px;
   }
 
   .footer__title {
-    padding-top: 30px;
-  }
-
-  .footer::before {
-    right: 20px;
-    top: 30px;
-  }
-
-  .footer::after {
-    left: 20px;
-    bottom: 16px;
+    padding-top: 20px;
   }
 }
 
 @media (width >= 1024px) {
   .header {
-    min-block-size: 787px;
+    min-block-size: 768px;
+    
   }
 
   .header__theme-menu {
@@ -475,8 +475,8 @@
     margin-top: 115px;
   }
 
-  .header::after {
-    bottom: 40px;
+  .main {
+    padding-top: 55px;
   }
 
   .section-problem-solution {
@@ -496,7 +496,6 @@
   }
 
   .section-distractions {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 0px;
@@ -524,18 +523,10 @@
   }
 
   .footer {
-    min-block-size: 774px;
+    min-block-size: 768px;
   }
 
   .footer__title {
-    padding-top: 20px;
-  }
-
-  .footer::before {
-    top: 27px;
-  }
-
-  .footer::after {
-    top: 263px;
+    padding-top: 10px;
   }
 }

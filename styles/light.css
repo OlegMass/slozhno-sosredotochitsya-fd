@@ -25,4 +25,22 @@
   --link-shadow-color: rgba(255, 141, 203, 1);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
+    --accent-color: rgba(255, 141, 203, 1);
+    --title-color: rgba(255, 194, 230, 1);
+    --description-color: rgba(53, 52, 48, 1);
+    --section-title-color: rgba(53, 52, 48, 1);
+    --section-description-color: rgba(53, 52, 48, 1);
+    --decorative-el-color: #fff1f7;
+    --decorative-el-corner-color: rgba(53, 52, 48, 1);
+    --button-text-color: rgba(53, 52, 48, 1);
+    --button-default-color: rgba(53, 52, 48, 1);
+    --border-button-hover-color: rgba(50, 49, 45, 0.4);
+    --border-button-focus-color: rgba(53, 52, 48, 1);
+    --link-shadow-color: rgba(255, 141, 203, 1);
+  }
+} 
 
